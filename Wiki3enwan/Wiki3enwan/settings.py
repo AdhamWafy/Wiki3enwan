@@ -141,4 +141,6 @@ GOOGLE_ANALYTICS = {
 
 ALLOWED_HOSTS = [
     'adhamwafy.pythonanywhere.com',
+    '127.0.0.1',
+    'localhost',
 ]
