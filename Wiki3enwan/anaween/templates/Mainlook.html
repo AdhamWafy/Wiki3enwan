@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -8,18 +9,20 @@
     {% bootstrap_css %}
     {% bootstrap_javascript %}
     <link rel="stylesheet" href="{% static '/style.css' %}">
-    <title>Wiki3enwan</title>
-</head>
-<body>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-12Z84M1MF2"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-12Z84M1MF2');
+        gtag('config', 'G-12Z84M1MF2');
     </script>
+
+    <title>Wiki3enwan</title>
+</head>
+
+<body>
 
     <div class="text-center shadow-sm p-1 navcontainer">
         <a class="navbrand" href="/">ويكي عناوين</a>
@@ -31,6 +34,7 @@
     </div>
     {% block content %}
     {% endblock content %}
-    
+
 </body>
+
 </html>
