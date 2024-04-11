@@ -132,3 +132,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 GOOGLE_ANALYTICS = {
     'google_analytics_id': '',
 }
+
+ALLOWED_HOSTS = {
+    'adhamwafy.pythonanywhere.com',
+}
