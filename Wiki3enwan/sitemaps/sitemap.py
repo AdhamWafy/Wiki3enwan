@@ -13,4 +13,4 @@ class enwaanSitemap(Sitemap):
 
     def location(self, item):
         # Construct the URL for each user-added page using reverse()
-        return reverse('anaween:enwaan_detail', kwargs={'slug': item.slug})
+        return reverse(':enwaan_detail', kwargs={'slug': item.slug})
