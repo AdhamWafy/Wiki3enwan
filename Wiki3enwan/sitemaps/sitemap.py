@@ -8,7 +8,7 @@ class enwaanSitemap(Sitemap):
 
     def items(self):
         # Fetch user-added pages from your model (replace with your model name and queryset logic)
-        enwaans = enwaan.objects.filter(is_published=True)
+        enwaans = enwaan.objects.all()
         return enwaans
 
     def location(self, item):
