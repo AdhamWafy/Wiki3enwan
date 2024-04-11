@@ -27,8 +27,6 @@ SECRET_KEY = 'django-insecure-sjvq5k5q^4f)8)#eg3b(kx=$$l%7uj051kc9d#+k*3@7o)uv2(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -141,6 +139,6 @@ GOOGLE_ANALYTICS = {
     'google_analytics_id': '',
 }
 
-ALLOWED_HOSTS = {
+ALLOWED_HOSTS = [
     'adhamwafy.pythonanywhere.com',
-}
+]
