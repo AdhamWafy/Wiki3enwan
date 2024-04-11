@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <title>Wiki3enwan</title>
+</head>
+<body>
+    <div class="text-center shadow-sm p-1 navcontainer">
+        <a class="navbrand" href="/">ويكي عناوين</a>
+        <ul class="navlist">
+            <a href="/signup">حساب جديد</a>
+            <a href="/accounts/login">تسجيل الدخول</a>
+            <a href="/accounts/login">تسجيل الخروج</a>
+        </ul>
+    </div>
+    {% block content %}
+    {% endblock content %}
+    
+</body>
+</html>

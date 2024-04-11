@@ -1,0 +1,97 @@
+body {
+    background-color: #EFFCFA;
+}
+
+.navcontainer{
+    height: 40px;
+    font-size: 60%;
+}
+
+.add{
+    border-radius: 7px;
+    border: none;
+    margin-top: 10px;
+}
+
+.add p{
+    margin-bottom: 0;
+    margin: 5px;
+}
+
+.btn-primary{
+    background-color: #36D8B8;
+}
+
+.btn-primary:hover{
+    background-color: #30bea2;
+}
+
+.card{
+    background-color: #84c4e759;
+    border: none;
+    margin: 15px;
+    padding: 5px;
+}
+
+.page-btn {
+    background-color: #36D8B8;
+    border-radius: 8px;
+}
+
+.page-btn:hover{
+    background-color: #30bea2;
+}
+
+.page-btn p{
+    font-weight:1000;
+    margin: 0;
+    padding: 5px;
+}
+
+.page-div-r {
+    display: inline-block;
+    float: right;
+    padding: 0;
+}
+
+.page-div-l {
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+.navbrand {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    font-weight: bolder;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.navlist {
+    display: inline-block;
+    float: right;
+    margin: 0;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+.navlist a {
+    color: black;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.navlist a:hover{
+    color: rgba(0, 0, 0, 0.308);
+}
+
+.navbrand a:hover{
+    color: rgba(0, 0, 0, 0.308);
+}
+
+.signup {
+    margin: 20%;
+}

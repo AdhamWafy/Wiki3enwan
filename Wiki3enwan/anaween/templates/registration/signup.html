@@ -1,0 +1,16 @@
+{% extends "Mainlook.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+    <div class="">
+    <h1 class="text-center my-5">Sign up page</h1>
+    <form method="post" class="mt-5 signup">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+        </div>
+    </form>
+    </div>
+{% endblock %}

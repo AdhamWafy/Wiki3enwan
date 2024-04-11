@@ -1,0 +1,18 @@
+{% extends 'Mainlook.html' %}
+
+{% block title %}
+Wiki3anaween
+{% endblock title %}
+
+{% block content %}
+<h1 class="text-center mt-3">Edit Enwaan</h1>
+{% if edit_limit_reached %}
+  <p class="error">You have reached the limit of 2 edits per day. Please try again tomorrow.</p>
+{% else %}
+<form method="post" class="text-center p-3" style="direction: rtl;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary btn-lg">Update</button>
+</form>
+{% endif %}
+{% endblock content %}

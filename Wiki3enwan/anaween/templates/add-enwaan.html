@@ -1,0 +1,21 @@
+{% extends 'Mainlook.html' %}
+
+{% block title %}
+Wiki3anaween
+{% endblock title %}
+
+{% block content %}
+<div class="container text-center" style="direction: rtl;">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>أضف عنوان</h1>
+            <form action="" method='POST'>
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-primary btn-sm" value=""> Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,54 @@
+{% extends 'Mainlook.html' %}
+
+{% block title %}
+Wiki3anaween
+{% endblock title %}
+
+{% block content %}
+<div class="container p-4 bgdark text-center">
+    <p class="h1">مرحبا بك في ويكي عناوين</p>
+    <p class="h3">كل ما تحتاج من عناوين و أرقام</p>
+
+    <div class="search row">
+        <div class="col-8 offset-2">
+            <form>
+                <div class="input-group">
+                    <input name="q" type="text" placeholder="أبحث عن عنوان" class="form-control">
+                    <div class="input-group-append">
+                        <button class="btn btn-dark btn-large">أبحث</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <form action="add-enwaan/">
+        <button class="btn-primary add"><p>أضف عنوان</p></button>
+    </form>
+
+    {% for obj in enwaanSearch%}
+    <div class="card shadow">
+        <a href="\{{obj.slug}}"><p class="h3"> {{obj.الأسم_والمنطقة}}</p></a>
+        <p class="lead">العنوان : {{obj.العنوان}} /// الرقم : {{obj.الرقم}} /// مقاطعة : {{obj.text}}</p>
+    </div>
+    {% endfor %}
+    <div class="container">
+        <div class="page-div-l">
+            {% if enwaanSearch.has_previous %}
+                <a href="?page={{enwaanSearch.previous_page_number}}/" class="btn btn-primary page-btn"><</a>
+            {% else %}
+                <a href="" class="btn btn-primary"><</a>
+            {% endif %}
+        </div>
+        <div class="page-div-r">
+            {% if enwaanSearch.has_next %}
+                <a href="?page={{enwaanSearch.next_page_number}}" class="btn btn-primary page-btn">></a>
+            {% else %}
+                <a href="" class="btn btn-primary">></a>
+            {% endif %}
+        </div>
+    </div>
+    <p>Page: {{enwaanSearch.number}}</p>
+</div>
+
+{% endblock content %}

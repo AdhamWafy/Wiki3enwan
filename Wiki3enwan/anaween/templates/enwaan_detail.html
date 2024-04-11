@@ -1,0 +1,37 @@
+{% extends 'Mainlook.html' %}
+
+{% block title %}
+Wiki3anaween
+{% endblock title %}
+
+{% block content %}
+<div class="rtl card p-2" style="direction: rtl;">
+    <h1 class="p-2">{{object.الأسم_والمنطقة}}</h1>
+    {%if objectect.مقاطعة is not True%}
+        {%if object.الرقم == null%}
+            <h4>العنوان : {{object.العنوان}} /// الرقم : لا يوجد /// مقاطعة : لا</h4>
+        {%else%}
+            <h4>العنوان : {{object.العنوان}} /// الرقم : {{object.الرقم}} /// مقاطعة : لا</h4>
+        {%endif%}
+    {%else%}
+        {%if object.الرقم == null%}
+            <h4>العنوان : {{object.العنوان}} /// الرقم : لا يوجد /// مقاطعة : نعم</h4>
+        {%else%}
+            <h4>العنوان : {{object.العنوان}} /// الرقم : {{object.الرقم}} /// مقاطعة : نعم</h4>
+        {%endif%}
+    {%endif%}
+    <h2 class="p-2">الوصف:</h2>
+    <h4>{{object.الوصف}}</h4>
+    <a href="edit" style="direction: ltr;"><p class="h5">Edit</p></a>
+</div>
+<div class="container p-2 text-center">
+    <h2>عناوين أخرى</h2>
+    {% for obj in enwaanSearch%}
+    <div class="card shadow">
+        <a href="\{{obj.slug}}"><p class="h3"> {{obj.الأسم_والمنطقة}}</p></a>
+        <p class="lead">العنوان : {{obj.العنوان}} /// الرقم : {{obj.الرقم}} /// مقاطعة : {{obj.text}}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
