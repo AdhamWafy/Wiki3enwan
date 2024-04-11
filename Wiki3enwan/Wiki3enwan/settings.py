@@ -42,7 +42,15 @@ INSTALLED_APPS = [
     'anaween',
     'bootstrap5',
     'google_analytics',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
+
+SITE_ID = 1
+
+DOMAIN = 'adhamwafy.pythonanywhere.com'
+SITE_NAME = 'Wiki3enwan'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
